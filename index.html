@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Anthropia</title>
+		<title>Anthropia : Un lieu alternatif, culturel et festif</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -19,11 +19,11 @@
 
 				<!-- Header -->
 					<header id="header" class="alt">
-						<h1><a href="index.html">Anthropia : UN LIEU ALTERNATIF, CULTUREL ET FESTIF</a></h1>
+						<h1><a href="index.html">Anthropia</a></h1>
 						<nav id="nav">
 							<ul>
 								<li class="special">
-									<a href="#" class="menuToggle"><span>Menu</span></a>
+									<!--<a href="#" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
@@ -177,6 +177,22 @@
 			</div>
 
 		<!-- Scripts -->
+			<script>
+				var isPlaying = false
+				function play() {
+					var audio = document.getElementById("audio");
+					if (isPlaying === false) {
+						document.getElementById("audioinput").value = "⏸";
+						audio.play();
+						isPlaying = true;
+					} else {
+						document.getElementById("audioinput").value = "▶";
+						audio.pause();
+						isPlaying = false;
+					}
+				}
+			</script>
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>

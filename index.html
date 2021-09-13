@@ -23,14 +23,17 @@
 						<nav id="nav">
 							<ul>
 								<li class="special">
-									<a href="#" class="menuToggle"><span>Menu</span></a>
+									<!--<a href="#" class="menuToggle"><span>Menu</span></a>
 									<div id="menu">
 										<ul>
 											<li><a href="index.html">Home</a></li>
 											<li><a href="generic.html">Generic</a></li>
 											<li><a href="elements.html">Elements</a></li>
 										</ul>
-									</div>
+									</div>-->
+									<input id="audioinput" class="button fit primary" type="button" value="&#9654;" onclick="play()" />
+									<!--https://media1.vocaroo.com/mp3/13Gw02cANsPH-->
+									<audio id="audio" onended="play()" src="https://media1.vocaroo.com/mp3/1e464KUj8sxu" />
 								</li>
 							</ul>
 						</nav>
@@ -166,6 +169,22 @@
 			</div>
 
 		<!-- Scripts -->
+			<script>
+				var isPlaying = false
+				function play() {
+					var audio = document.getElementById("audio");
+					if (isPlaying === false) {
+						document.getElementById("audioinput").value = "⏸";
+						audio.play();
+						isPlaying = true;
+					} else {
+						document.getElementById("audioinput").value = "▶";
+						audio.pause();
+						isPlaying = false;
+					}
+				}
+			</script>
+
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrollex.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>

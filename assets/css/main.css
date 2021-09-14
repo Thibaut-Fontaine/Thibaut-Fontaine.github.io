@@ -161,12 +161,14 @@ input, select, textarea {
 
 	p {
 		margin: 0 0 2em 0;
+		text-align: justify;
 	}
 
 	.title {
 		font-family: "Times new roman";
 		font-style: italic;
 		line-height: 93%;
+		text-align: center;
 	}
 
 	.citation {

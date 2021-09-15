@@ -2574,6 +2574,18 @@ input, select, textarea {
 		width: 100%;
 	}
 
+		.features p {
+			opacity: 0;
+			max-height: 0px;
+		}
+
+		.features li:hover p {
+			max-height: 100%;
+			opacity: 100%;
+			transition: width 0.3s;
+			transition: opacity 1s;
+		}
+
 		.features li {
 			padding: 4em 4em 2em 6em ;
 			display: block;

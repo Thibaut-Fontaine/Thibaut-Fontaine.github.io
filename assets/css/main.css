@@ -2597,6 +2597,9 @@ ul.bibliography li:hover {
 			width: 50%;
 		}
 
+		.features li:hover {
+			filter: invert(80%);	}
+
 		.features.blur li:hover {
 				opacity: 1; /* Full opacity when hovered */
 				filter: blur(0); /* Remove blur on hover */

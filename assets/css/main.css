@@ -1853,7 +1853,7 @@ input, select, textarea {
 		input[type="email"]:focus,
 		select:focus,
 		textarea:focus {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #608037;
 		}
 
 	select {
@@ -1950,7 +1950,7 @@ input, select, textarea {
 
 		input[type="checkbox"]:focus + label:before,
 		input[type="radio"]:focus + label:before {
-			box-shadow: 0 0 0 2px #21b2a6;
+			box-shadow: 0 0 0 2px #608037;
 		}
 
 	input[type="checkbox"] + label:before {
@@ -2528,6 +2528,47 @@ input, select, textarea {
 
 		}
 
+/* Bibliography */
+
+ul.bibliography {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+ul.bibliography li {
+	display: grid;
+	grid-template-columns: 0.75fr 1.5fr 0.75fr;
+	gap: 10px;
+	padding: 5px 0;
+	color:#f9ebcd;
+}
+
+ul.bibliography li:nth-child(odd) {
+	background-color: #608037; /* Light grey for odd items */
+}
+
+ul.bibliography li:nth-child(even) {
+	background-color: #758b59; /* Slightly darker grey for even items */
+}
+
+ul.bibliography li div {
+	padding: 5px;
+	border-left: 1px solid #2E3842; /* Adjust color and thickness as needed */
+}
+
+ul.bibliography li:hover {
+	opacity: 0.7; /* Reduce opacity when hovered */
+}
+
+
+
+
+
+
+
+
+
 /* Features */
 
 	.features {
@@ -2549,12 +2590,34 @@ input, select, textarea {
 	}
 
 		.features li {
-			padding: 4em 4em 2em 6em ;
+			padding: 4em 4em 2em 6em;
 			display: block;
 			position: relative;
 			text-align: left;
 			width: 50%;
 		}
+
+		.features.blur li:hover {
+				opacity: 1; /* Full opacity when hovered */
+				filter: blur(0); /* Remove blur on hover */
+				animation: none;
+		}
+
+		.features.blur li:not(:hover) {
+			animation: blurBack 10s forwards; /* Start blurBack animation after unhovering */
+		}
+
+		@keyframes blurBack {
+			0% {
+					opacity: 1; /* Start fully visible */
+					filter: blur(0); /* Start clear */
+			}
+			100% {
+					opacity: 0.7; /* End semi-transparent */
+					filter: blur(6px); /* End blurred */
+			}
+		}
+
 
 			.features li:nth-child(1) {
 				background-color: rgba(0, 0, 0, 0.035);
@@ -2811,8 +2874,8 @@ input, select, textarea {
 		}
 
 		.wrapper.style1 {
-			background-color: #21b2a6;
-			color: #c8ece9;
+			background-color: #608037;
+			color: #F9EBCD;
 		}
 
 			.wrapper.style1 strong, .wrapper.style1 b {
@@ -2844,7 +2907,7 @@ input, select, textarea {
 			}
 
 			.wrapper.style1 header.major p {
-				color: #c8ece9;
+				color: #F9EBCD;
 			}
 
 			.wrapper.style1 label {
@@ -2865,12 +2928,12 @@ input, select, textarea {
 
 				.wrapper.style1 select option {
 					color: #ffffff;
-					background: #21b2a6;
+					background: #608037;
 				}
 
 			.wrapper.style1 input[type="checkbox"] + label,
 			.wrapper.style1 input[type="radio"] + label {
-				color: #c8ece9;
+				color: #F9EBCD;
 			}
 
 				.wrapper.style1 input[type="checkbox"] + label:before,
@@ -2881,7 +2944,7 @@ input, select, textarea {
 			.wrapper.style1 input[type="checkbox"]:checked + label:before,
 			.wrapper.style1 input[type="radio"]:checked + label:before {
 				background: #ffffff;
-				color: #21b2a6;
+				color: #608037;
 			}
 
 			.wrapper.style1 ::-webkit-input-placeholder {
@@ -2974,7 +3037,7 @@ input, select, textarea {
 		}
 
 		.wrapper.style3 {
-			background-color: #505393;
+			background-color: #376080;
 			color: #d3d4e4;
 		}
 
@@ -3028,7 +3091,7 @@ input, select, textarea {
 
 				.wrapper.style3 select option {
 					color: #ffffff;
-					background: #505393;
+					background: #376080;
 				}
 
 			.wrapper.style3 input[type="checkbox"] + label,
@@ -3044,7 +3107,7 @@ input, select, textarea {
 			.wrapper.style3 input[type="checkbox"]:checked + label:before,
 			.wrapper.style3 input[type="radio"]:checked + label:before {
 				background: #ffffff;
-				color: #505393;
+				color: #376080;
 			}
 
 			.wrapper.style3 ::-webkit-input-placeholder {
@@ -3345,7 +3408,7 @@ input, select, textarea {
 		-ms-transition: -ms-transform 0.5s ease;
 		transition: transform 0.5s ease;
 		-webkit-overflow-scrolling: touch;
-		background: #21b2a6;
+		background: #608037;
 		color: #ffffff;
 		height: 100%;
 		max-width: 80%;
@@ -3808,10 +3871,10 @@ input, select, textarea {
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.gif");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.gif");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.gif");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.gif");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3958,10 +4021,10 @@ input, select, textarea {
 /* Landing */
 
 	body.landing #page-wrapper {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.gif");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.gif");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.gif");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.gif");
 		background-attachment: fixed;
 		background-position: center center;
 		background-repeat: no-repeat;
@@ -3979,10 +4042,10 @@ input, select, textarea {
 
 	body.is-mobile.landing #banner,
 	body.is-mobile.landing .wrapper.style4 {
-		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
-		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
+		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.gif");
+		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.gif");
+		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.gif");
+		background-image: linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.gif");
 		background-position: center center;
 		background-repeat: no-repeat;
 		background-size: cover;
